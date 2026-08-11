@@ -267,233 +267,242 @@
       </div>
     </section>
 
-    <!-- Popular Dishes & About Us Split Section -->
-    <section class="dishes-about-section" id="about" aria-label="Popular Dishes and About Attil">
-      <div class="dishes-about-grid">
-        
-        <!-- Left Column: Popular Dishes -->
-        <div class="popular-dishes-block">
-          <div class="section-header-row">
-            <div class="section-title-wrap">
-              <span class="section-accent-line"></span>
-              <h2 class="section-title">Our Popular Dishes</h2>
-            </div>
-            <button class="btn-link-action" onclick="openMenuModal(event)" aria-label="View all menu items">
-              <span>View All Menu</span>
-              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </button>
+    <!-- Full Width End-to-End Food Showcase Section -->
+    <section class="food-showcase-section" id="dishes-section" aria-label="Popular Dishes and Sea Food Specialties">
+      
+      <!-- Section 1: Our Popular Dishes (Full Width Row) -->
+      <div class="showcase-row-block">
+        <div class="section-header-row">
+          <div class="section-title-wrap">
+            <span class="section-accent-line"></span>
+            <h2 class="section-title">Our Popular Dishes</h2>
           </div>
-
-          <!-- 5 Food Cards: Popular Dishes (Marquee Moving Right to Left - 4 Seamless Sets) -->
-          <div class="cards-marquee-container marquee-left" aria-label="Popular Dishes Scrolling Row">
-            <div class="cards-marquee-track scroll-rtl">
-              
-              <!-- Set 1 -->
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_biryani.png" alt="Chicken Biryani" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Chicken Biryani</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_chickencurry.png" alt="Chicken Curry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Chicken Curry</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_muttoncurry.png" alt="Mutton Curry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Mutton Curry</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_chickenkabab.png" alt="Chicken Kabab" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Chicken Kabab</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Fish Fry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Fish Fry</span></div>
-              </div>
-
-              <!-- Set 2 -->
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_biryani.png" alt="Chicken Biryani" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Chicken Biryani</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_chickencurry.png" alt="Chicken Curry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Chicken Curry</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_muttoncurry.png" alt="Mutton Curry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Mutton Curry</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_chickenkabab.png" alt="Chicken Kabab" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Chicken Kabab</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Fish Fry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Fish Fry</span></div>
-              </div>
-
-              <!-- Set 3 -->
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_biryani.png" alt="Chicken Biryani" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Chicken Biryani</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_chickencurry.png" alt="Chicken Curry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Chicken Curry</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_muttoncurry.png" alt="Mutton Curry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Mutton Curry</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_chickenkabab.png" alt="Chicken Kabab" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Chicken Kabab</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Fish Fry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Fish Fry</span></div>
-              </div>
-
-              <!-- Set 4 -->
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_biryani.png" alt="Chicken Biryani" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Chicken Biryani</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_chickencurry.png" alt="Chicken Curry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Chicken Curry</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_muttoncurry.png" alt="Mutton Curry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Mutton Curry</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_chickenkabab.png" alt="Chicken Kabab" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Chicken Kabab</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Fish Fry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Fish Fry</span></div>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Sea Food Row Header -->
-          <div class="section-header-row seafood-header-row">
-            <div class="section-title-wrap">
-              <span class="section-accent-line"></span>
-              <h2 class="section-title">Coastal Sea Food Specialties</h2>
-            </div>
-            <span class="seafood-badge">Fresh Daily Catch 🐟</span>
-          </div>
-
-          <!-- 5 Sea Food Cards (Marquee Moving Left to Right - 4 Seamless Sets) -->
-          <div class="cards-marquee-container marquee-right" aria-label="Sea Food Specialties Scrolling Row">
-            <div class="cards-marquee-track scroll-ltr">
-              
-              <!-- Set 1 -->
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Anjal Masala Fry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Anjal Tawa Fry</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_prawns_gheeroast.png" alt="Prawns Ghee Roast" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Prawns Ghee Roast</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_pomfret_fry.png" alt="Pomfret Rava Fry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Pomfret Rava Fry</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_crab_sukka.png" alt="Crab Sukka" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Crab Sukka</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_squid_fry.png" alt="Squid Pepper Fry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Squid Pepper Fry</span></div>
-              </div>
-
-              <!-- Set 2 -->
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Anjal Masala Fry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Anjal Tawa Fry</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_prawns_gheeroast.png" alt="Prawns Ghee Roast" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Prawns Ghee Roast</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_pomfret_fry.png" alt="Pomfret Rava Fry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Pomfret Rava Fry</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_crab_sukka.png" alt="Crab Sukka" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Crab Sukka</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_squid_fry.png" alt="Squid Pepper Fry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Squid Pepper Fry</span></div>
-              </div>
-
-              <!-- Set 3 -->
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Anjal Masala Fry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Anjal Tawa Fry</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_prawns_gheeroast.png" alt="Prawns Ghee Roast" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Prawns Ghee Roast</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_pomfret_fry.png" alt="Pomfret Rava Fry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Pomfret Rava Fry</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_crab_sukka.png" alt="Crab Sukka" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Crab Sukka</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_squid_fry.png" alt="Squid Pepper Fry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Squid Pepper Fry</span></div>
-              </div>
-
-              <!-- Set 4 -->
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Anjal Masala Fry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Anjal Tawa Fry</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_prawns_gheeroast.png" alt="Prawns Ghee Roast" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Prawns Ghee Roast</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_pomfret_fry.png" alt="Pomfret Rava Fry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Pomfret Rava Fry</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_crab_sukka.png" alt="Crab Sukka" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Crab Sukka</span></div>
-              </div>
-              <div class="dish-card">
-                <div class="dish-img-wrapper"><img src="images/dish_squid_fry.png" alt="Squid Pepper Fry" class="dish-img" loading="lazy"></div>
-                <div class="dish-title-pill"><span class="dish-name">Squid Pepper Fry</span></div>
-              </div>
-
-            </div>
-          </div>
+          <button class="btn-link-action" onclick="openMenuModal(event)" aria-label="View all menu items">
+            <span>View All Menu</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
         </div>
 
-        <!-- Right Column: About Attil & Chef Visual Card -->
-        <div class="about-block">
-          <div class="about-content-wrap">
+        <!-- 5 Food Cards: Popular Dishes (Moving Right to Left End-to-End) -->
+        <div class="cards-marquee-container marquee-left" aria-label="Popular Dishes Scrolling Row">
+          <div class="cards-marquee-track scroll-rtl">
+            
+            <!-- Set 1 -->
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_biryani.png" alt="Chicken Biryani" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Chicken Biryani</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_chickencurry.png" alt="Chicken Curry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Chicken Curry</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_muttoncurry.png" alt="Mutton Curry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Mutton Curry</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_chickenkabab.png" alt="Chicken Kabab" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Chicken Kabab</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Fish Fry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Fish Fry</span></div>
+            </div>
+
+            <!-- Set 2 -->
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_biryani.png" alt="Chicken Biryani" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Chicken Biryani</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_chickencurry.png" alt="Chicken Curry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Chicken Curry</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_muttoncurry.png" alt="Mutton Curry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Mutton Curry</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_chickenkabab.png" alt="Chicken Kabab" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Chicken Kabab</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Fish Fry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Fish Fry</span></div>
+            </div>
+
+            <!-- Set 3 -->
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_biryani.png" alt="Chicken Biryani" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Chicken Biryani</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_chickencurry.png" alt="Chicken Curry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Chicken Curry</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_muttoncurry.png" alt="Mutton Curry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Mutton Curry</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_chickenkabab.png" alt="Chicken Kabab" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Chicken Kabab</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Fish Fry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Fish Fry</span></div>
+            </div>
+
+            <!-- Set 4 -->
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_biryani.png" alt="Chicken Biryani" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Chicken Biryani</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_chickencurry.png" alt="Chicken Curry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Chicken Curry</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_muttoncurry.png" alt="Mutton Curry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Mutton Curry</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_chickenkabab.png" alt="Chicken Kabab" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Chicken Kabab</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Fish Fry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Fish Fry</span></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Coastal Sea Food Specialties (Full Width Row) -->
+      <div class="showcase-row-block">
+        <div class="section-header-row seafood-header-row">
+          <div class="section-title-wrap">
+            <span class="section-accent-line"></span>
+            <h2 class="section-title">Coastal Sea Food Specialties</h2>
+          </div>
+          <span class="seafood-badge">Fresh Daily Catch 🐟</span>
+        </div>
+
+        <!-- 5 Sea Food Cards: Moving Left to Right End-to-End -->
+        <div class="cards-marquee-container marquee-right" aria-label="Sea Food Specialties Scrolling Row">
+          <div class="cards-marquee-track scroll-ltr">
+            
+            <!-- Set 1 -->
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Anjal Masala Fry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Anjal Tawa Fry</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_prawns_gheeroast.png" alt="Prawns Ghee Roast" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Prawns Ghee Roast</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_pomfret_fry.png" alt="Pomfret Rava Fry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Pomfret Rava Fry</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_crab_sukka.png" alt="Crab Sukka" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Crab Sukka</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_squid_fry.png" alt="Squid Pepper Fry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Squid Pepper Fry</span></div>
+            </div>
+
+            <!-- Set 2 -->
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Anjal Masala Fry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Anjal Tawa Fry</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_prawns_gheeroast.png" alt="Prawns Ghee Roast" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Prawns Ghee Roast</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_pomfret_fry.png" alt="Pomfret Rava Fry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Pomfret Rava Fry</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_crab_sukka.png" alt="Crab Sukka" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Crab Sukka</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_squid_fry.png" alt="Squid Pepper Fry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Squid Pepper Fry</span></div>
+            </div>
+
+            <!-- Set 3 -->
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Anjal Masala Fry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Anjal Tawa Fry</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_prawns_gheeroast.png" alt="Prawns Ghee Roast" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Prawns Ghee Roast</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_pomfret_fry.png" alt="Pomfret Rava Fry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Pomfret Rava Fry</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_crab_sukka.png" alt="Crab Sukka" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Crab Sukka</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_squid_fry.png" alt="Squid Pepper Fry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Squid Pepper Fry</span></div>
+            </div>
+
+            <!-- Set 4 -->
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Anjal Masala Fry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Anjal Tawa Fry</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_prawns_gheeroast.png" alt="Prawns Ghee Roast" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Prawns Ghee Roast</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_pomfret_fry.png" alt="Pomfret Rava Fry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Pomfret Rava Fry</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_crab_sukka.png" alt="Crab Sukka" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Crab Sukka</span></div>
+            </div>
+            <div class="dish-card">
+              <div class="dish-img-wrapper"><img src="images/dish_squid_fry.png" alt="Squid Pepper Fry" class="dish-img" loading="lazy"></div>
+              <div class="dish-title-pill"><span class="dish-name">Squid Pepper Fry</span></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- About Attil & Chef Section -->
+    <section class="about-attil-section" id="about" aria-label="About Attil Non Veg Hotel">
+      <div class="about-card-container">
+        
+        <div class="about-content-wrap">
+          <div class="section-title-wrap">
+            <span class="section-accent-line"></span>
             <h2 class="about-heading">About Attil Non Veg Hotel</h2>
-            <p class="about-desc">
-              At Attil, we serve a wide variety of delicious non veg dishes made with the freshest ingredients and authentic spices. Our goal is to provide every customer with a memorable dining experience.
-            </p>
+          </div>
+          <p class="about-desc">
+            At Attil, we serve a wide variety of delicious non veg dishes made with the freshest ingredients and authentic spices. Our goal is to provide every customer with a memorable dining experience.
+          </p>
+          <div class="about-actions-row">
             <button class="btn-know-more" onclick="openAboutModal()" aria-label="Know more about Attil">
               <span>Know More About Us</span>
               <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -501,19 +510,25 @@
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </button>
+            <a href="tel:+919845123456" class="btn btn-outline-call">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+              </svg>
+              <span>+91 98451 23456</span>
+            </a>
           </div>
+        </div>
 
-          <!-- Chef Illustration Graphic Card -->
-          <div class="chef-quote-card">
-            <div class="chef-illustration-box">
-              <img src="images/chef_illustration.png" alt="Attil Master Chef" class="chef-art-img" loading="lazy">
-            </div>
-            <div class="chef-quote-text">
-              <span class="sparkle-icon">✦</span>
-              <h3 class="quote-title">Good Food</h3>
-              <h3 class="quote-title">Good Mood</h3>
-              <span class="quote-script">Always!</span>
-            </div>
+        <!-- Chef Visual Quote Card -->
+        <div class="chef-quote-card">
+          <div class="chef-illustration-box">
+            <img src="images/chef_illustration.png" alt="Attil Master Chef" class="chef-art-img" loading="lazy">
+          </div>
+          <div class="chef-quote-text">
+            <span class="sparkle-icon">✦</span>
+            <h3 class="quote-title">Good Food</h3>
+            <h3 class="quote-title">Good Mood</h3>
+            <span class="quote-script">Always!</span>
           </div>
         </div>
 

@@ -834,6 +834,27 @@ button {
 }
 
 /* ==========================================================================
+   Full-Width End-to-End Food Showcase Section
+   ========================================================================== */
+.food-showcase-section {
+  width: 100%;
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.showcase-row-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.showcase-row-block .section-header-row {
+  margin-bottom: 12px;
+}
+
+/* ==========================================================================
    Continuous Marquee Cards Animation (Row 1 RTL, Row 2 LTR)
    ========================================================================== */
 .cards-marquee-container {
@@ -841,11 +862,12 @@ button {
   overflow: hidden;
   position: relative;
   padding: 6px 0;
+  border-radius: var(--radius-md);
 }
 
 .cards-marquee-track {
   display: flex;
-  gap: 14px;
+  gap: 16px;
   width: max-content;
   will-change: transform;
 }
@@ -883,173 +905,220 @@ button {
   }
 }
 
-/* Dish Card in Marquee */
+/* Dish Card in Full-Width Marquee */
 .cards-marquee-track .dish-card {
-  flex: 0 0 135px;
-  width: 135px;
+  flex: 0 0 160px;
+  width: 160px;
 }
 
 .dish-card {
-  background-color: var(--color-bg-white);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  overflow: hidden;
-  transition: all var(--transition-smooth);
-  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
 }
 
 .dish-card:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--color-primary-border);
+  transform: translateY(-4px);
 }
 
 .dish-img-wrapper {
-  position: relative;
   width: 100%;
-  aspect-ratio: 1 / 0.88;
+  height: 110px;
+  border-radius: var(--radius-md);
   overflow: hidden;
-  background-color: #f1f5f9;
+  position: relative;
+  background-color: #f3f4f6;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
 }
 
 .dish-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.4s ease;
+  transition: transform var(--transition-normal);
 }
 
 .dish-card:hover .dish-img {
-  transform: scale(1.05);
+  transform: scale(1.08);
 }
 
 .dish-title-pill {
-  padding: 9px 4px;
-  text-align: center;
   background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  padding: 4px 12px;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  width: 96%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .dish-name {
   font-family: var(--font-heading);
-  font-size: 12px;
-  font-weight: 600;
+  font-size: 11.5px;
+  font-weight: 700;
   color: var(--color-text-dark);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block;
 }
 
-/* About Block */
-.about-block {
+/* ==========================================================================
+   Dedicated About Attil & Chef Art Section
+   ========================================================================== */
+.about-attil-section {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.about-card-container {
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 24px 32px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  align-items: stretch;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+  align-items: center;
+  box-shadow: var(--shadow-sm);
 }
 
 .about-content-wrap {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: 4px 0;
 }
 
 .about-heading {
   font-family: var(--font-heading);
-  font-size: 19px;
-  font-weight: 700;
+  font-size: 22px;
+  font-weight: 800;
   color: var(--color-primary);
-  margin-bottom: 10px;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 .about-desc {
-  font-size: 12px;
-  line-height: 1.55;
-  color: var(--color-text-body);
-  margin-bottom: 16px;
+  font-family: var(--font-body);
+  font-size: 13.5px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 12px 0 18px;
+}
+
+.about-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
 .btn-know-more {
-  align-self: flex-start;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: var(--font-heading);
-  font-size: 12px;
-  font-weight: 600;
   color: var(--color-primary);
-  border: 1px solid var(--color-primary-border);
-  padding: 6px 14px;
-  border-radius: var(--radius-pill);
+  font-family: var(--font-heading);
+  font-size: 12.5px;
+  font-weight: 700;
   background-color: var(--color-bg-white);
+  border: 1px solid var(--color-primary-border);
+  padding: 7px 16px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all var(--transition-fast);
 }
 
 .btn-know-more:hover {
-  background-color: var(--color-primary-light);
+  background-color: var(--color-primary);
+  color: #ffffff;
   border-color: var(--color-primary);
+  transform: translateX(2px);
+}
+
+.btn-outline-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: 12.5px;
+  font-weight: 700;
+  background-color: var(--color-bg-white);
+  border: 1px solid var(--color-border);
+  padding: 7px 16px;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.btn-outline-call .btn-icon {
+  width: 14px;
+  height: 14px;
+}
+
+.btn-outline-call:hover {
+  border-color: var(--color-primary);
+  background-color: rgba(11, 107, 42, 0.05);
 }
 
 /* Chef Visual Quote Card */
 .chef-quote-card {
-  background-color: var(--color-bg-white);
+  background-color: #fafbfc;
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 16px 14px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  box-shadow: var(--shadow-sm);
-  position: relative;
-  overflow: hidden;
-}
-
-.chef-illustration-box {
-  flex: 0 0 45%;
-  max-width: 45%;
+  padding: 16px 24px;
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 20px;
+}
+
+.chef-illustration-box {
+  flex: 0 0 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .chef-art-img {
-  width: 100%;
-  max-height: 140px;
+  width: 76px;
+  height: 76px;
   object-fit: contain;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .chef-quote-text {
-  flex: 1;
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-.sparkle-icon {
+.chef-quote-text .sparkle-icon {
   position: absolute;
-  top: -12px;
-  right: 0;
-  color: var(--color-primary);
-  font-size: 16px;
+  top: -6px;
+  right: -12px;
+  color: #10b981;
+  font-size: 14px;
 }
 
 .quote-title {
   font-family: var(--font-heading);
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 800;
-  color: var(--color-text-dark);
+  color: #111827;
   line-height: 1.15;
+  letter-spacing: -0.2px;
 }
 
 .quote-script {
   font-family: var(--font-script);
-  font-size: 32px;
+  font-size: 26px;
+  font-weight: 700;
   color: var(--color-primary);
-  line-height: 1;
-  margin-top: 4px;
+  line-height: 1.2;
+  margin-top: 2px;
 }
 
 /* ==========================================================================
