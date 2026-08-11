@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attil Mangalore - Non Veg Hotel | Authentic Non-Veg Delicacies</title>
+  <meta name="description" content="Attil Non Veg Hotel Mangalore - Taste the Best, Forget the Rest! Serving authentic Chicken Biryani, Mutton Curry, Fish Fry, Chicken Kabab, and coastal non-veg dishes in Bendoorwell, Mangaluru.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@600;700;800&family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-container">
+      <!-- Brand Logo -->
+      <a href="#home" class="brand-logo" aria-label="Attil Mangalore Home">
+        <div class="logo-text-wrapper">
+          <span class="logo-title">Attil<span class="trademark">®</span></span>
+          <div class="logo-divider">
+            <span class="logo-subline">MANGALORE</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#home" class="nav-link active" data-nav="home">Home</a></li>
+          <li class="nav-item"><a href="#menu" class="nav-link" data-nav="menu" onclick="openMenuModal(event)">Menu</a></li>
+          <li class="nav-item"><a href="#specialties" class="nav-link" data-nav="specialties" onclick="openSpecialtiesModal(event)">Specialties</a></li>
+          <li class="nav-item"><a href="#gallery" class="nav-link" data-nav="gallery" onclick="openGalleryModal(event)">Gallery</a></li>
+          <li class="nav-item"><a href="#about" class="nav-link" data-nav="about" onclick="scrollToSection('about-section')">About Us</a></li>
+          <li class="nav-item"><a href="#contact" class="nav-link" data-nav="contact" onclick="openContactModal(event)">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header CTA -->
+      <div class="header-actions">
+        <a href="tel:+919845123456" class="btn btn-primary btn-header-call" aria-label="Call Restaurant">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+          </svg>
+          <span>Call Us</span>
+        </a>
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation menu" onclick="toggleMobileMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="mobile-drawer-header">
+        <div class="logo-text-wrapper">
+          <span class="logo-title">Attil<span class="trademark">®</span></span>
+          <div class="logo-divider"><span class="logo-subline">MANGALORE</span></div>
+        </div>
+        <button class="close-drawer-btn" onclick="toggleMobileMenu()" aria-label="Close menu">&times;</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="#home" class="mobile-nav-link" onclick="toggleMobileMenu()">Home</a></li>
+        <li><a href="#menu" class="mobile-nav-link" onclick="toggleMobileMenu(); openMenuModal(event);">Menu</a></li>
+        <li><a href="#specialties" class="mobile-nav-link" onclick="toggleMobileMenu(); openSpecialtiesModal(event);">Specialties</a></li>
+        <li><a href="#gallery" class="mobile-nav-link" onclick="toggleMobileMenu(); openGalleryModal(event);">Gallery</a></li>
+        <li><a href="#about" class="mobile-nav-link" onclick="toggleMobileMenu(); scrollToSection('about-section');">About Us</a></li>
+        <li><a href="#contact" class="mobile-nav-link" onclick="toggleMobileMenu(); openContactModal(event);">Contact Us</a></li>
+      </ul>
+      <div class="mobile-drawer-cta">
+        <a href="tel:+919845123456" class="btn btn-primary btn-block" onclick="toggleMobileMenu()">
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+          </svg>
+          Call Us
+        </a>
+      </div>
+    </div>
+    <div class="drawer-overlay" id="drawerOverlay" onclick="toggleMobileMenu()"></div>
+  </header>
+
+  <!-- Main Content Body -->
+  <main id="home-main" class="page-container">
+    
+    <!-- Hero Section -->
+    <section class="hero-section" aria-label="Hero Introduction">
+      <div class="hero-wrapper">
+        
+        <!-- Hero Left White Column -->
+        <div class="hero-content-col">
+          <div class="hero-tagline-wrap">
+            <span class="hero-tagline">Taste the Best, Forget the Rest!</span>
+            <span class="hero-tagline-line"></span>
+          </div>
+
+          <h1 class="hero-brand-heading">ATTIL</h1>
+          <h2 class="hero-brand-subheading">NON VEG HOTEL</h2>
+
+          <div class="hero-info-item hero-location-item">
+            <div class="hero-icon-box">
+              <svg class="location-pin-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+            </div>
+            <div class="hero-info-text">
+              <p class="loc-line">Attil Bendoorwell Main Rd,</p>
+              <p class="loc-line">below radha medical, Bendoorwell,</p>
+              <p class="loc-line">Kankanady, Mangaluru, Karnataka 575002, India</p>
+            </div>
+          </div>
+
+          <div class="hero-info-item hero-food-highlight">
+            <div class="hero-icon-box">
+              <svg class="food-plate-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M18 12h-4"></path>
+                <path d="M6 12h4"></path>
+                <path d="M12 6v6"></path>
+                <path d="M12 18v-2"></path>
+              </svg>
+            </div>
+            <div class="hero-info-text">
+              <p>Serving Authentic &amp; Delicious</p>
+              <p class="highlight-green"><strong>Non Veg Food</strong> with Quality &amp; Hygiene.</p>
+            </div>
+          </div>
+
+          <!-- Hero Action Buttons -->
+          <div class="hero-cta-group">
+            <button class="btn btn-hero-menu" onclick="openMenuModal(event)">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                <line x1="8" y1="6" x2="16" y2="6"></line>
+                <line x1="8" y1="10" x2="16" y2="10"></line>
+                <line x1="8" y1="14" x2="13" y2="14"></line>
+              </svg>
+              <span>View Menu</span>
+            </button>
+            <a href="tel:+919845123456" class="btn btn-hero-call">
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+              </svg>
+              <span>Call Now</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Right Image Column with Organic Curved Divider -->
+        <div class="hero-visual-col">
+          <!-- Curved Organic SVG Divider -->
+          <div class="hero-curve-separator" aria-hidden="true">
+            <svg viewBox="0 0 160 620" preserveAspectRatio="none">
+              <!-- Dark Green Ribbon Edge Layer -->
+              <path d="M160,0 C60,110 0,220 35,380 C60,490 20,570 0,620 L160,620 Z" fill="#0B6B2A" opacity="0.95"></path>
+              <!-- White Clean Cutout Layer -->
+              <path d="M0,0 L140,0 C45,110 -15,220 20,380 C45,490 5,570 -15,620 L0,620 Z" fill="#FFFFFF"></path>
+            </svg>
+          </div>
+
+          <!-- Hero Image Carousel -->
+          <div class="hero-carousel-container" id="heroCarousel">
+            <div class="carousel-slide active" data-slide="0">
+              <img src="images/hero_biryani.png" alt="Attil Special Authentic Chicken Dum Biryani" class="hero-food-img" loading="eager">
+            </div>
+            <div class="carousel-slide" data-slide="1">
+              <img src="images/hero_gheeroast.png" alt="Attil Special Kundapura Chicken Ghee Roast" class="hero-food-img" loading="lazy">
+            </div>
+            <div class="carousel-slide" data-slide="2">
+              <img src="images/dish_muttoncurry.png" alt="Attil Authentic Mutton Curry and Masala" class="hero-food-img" loading="lazy">
+            </div>
+          </div>
+
+          <!-- Hero Slider Dots -->
+          <div class="hero-slider-dots" id="heroDots" role="tablist" aria-label="Hero slide selector">
+            <button class="hero-dot active" role="tab" aria-selected="true" aria-label="Slide 1: Chicken Biryani" onclick="goToSlide(0)"></button>
+            <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 2: Chicken Ghee Roast" onclick="goToSlide(1)"></button>
+            <button class="hero-dot" role="tab" aria-selected="false" aria-label="Slide 3: Mutton Curry" onclick="goToSlide(2)"></button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Feature Bar Section -->
+    <section class="feature-bar-section" aria-label="Key Restaurant Features">
+      <div class="feature-bar-card">
+        
+        <!-- Feature 1 -->
+        <div class="feature-item">
+          <div class="feature-icon-wrap">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="currentColor">
+              <!-- Drumstick / Non Veg Meat Icon -->
+              <path d="M21.2 5.2c-1.8-1.8-4.7-1.8-6.5 0l-2.4 2.4-1.4-1.4c-.4-.4-1-.4-1.4 0s-.4 1 0 1.4l1.4 1.4-5.2 5.2c-1.8 1.8-1.8 4.7 0 6.5.9.9 2.1 1.4 3.3 1.4s2.4-.5 3.3-1.4l5.2-5.2 1.4 1.4c.4.4 1 .4 1.4 0s.4-1 0-1.4l-1.4-1.4 2.4-2.4c1.8-1.9 1.8-4.8-.1-6.5zM17.4 13.9l-5.3 5.3c-1.1 1.1-2.9 1.1-4 0s-1.1-2.9 0-4l5.3-5.3 4 4z"/>
+            </svg>
+          </div>
+          <div class="feature-text-wrap">
+            <h3 class="feature-title">100% Non Veg</h3>
+            <p class="feature-desc">Pure non veg dishes made with fresh meat.</p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-item">
+          <div class="feature-icon-wrap">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="currentColor">
+              <!-- Leaf / Hygiene Icon -->
+              <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A4.49 4.49 0 0 0 8 20C19 20 22 3 22 3c-1 2-8 2.25-13 3.25S2 11.5 2 13.5s1.75 3.75 1.75 3.75C7 8 17 8 17 8z"/>
+            </svg>
+          </div>
+          <div class="feature-text-wrap">
+            <h3 class="feature-title">Fresh &amp; Hygienic</h3>
+            <p class="feature-desc">We maintain the highest standards of hygiene.</p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-item">
+          <div class="feature-icon-wrap">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="currentColor">
+              <!-- Cloche / Authentic Taste Icon -->
+              <path d="M12 3a2 2 0 0 0-2 2h4a2 2 0 0 0-2-2zm-1 3.06A9.004 9.004 0 0 0 3 15v1a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-1a9.004 9.004 0 0 0-8-8.94V6.06zM2 19h20v2H2v-2z"/>
+            </svg>
+          </div>
+          <div class="feature-text-wrap">
+            <h3 class="feature-title">Authentic Taste</h3>
+            <p class="feature-desc">Traditional recipes with rich authentic flavor.</p>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="feature-item">
+          <div class="feature-icon-wrap">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="currentColor">
+              <!-- Rupee Shield / Affordable Icon -->
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm1.5 13.5h-2.2l-2.3 3.5H7.5l2.4-3.5H8v-1.5h2V12H8v-1.5h2c0-1.1.9-2 2-2h3v1.5h-3c-.3 0-.5.2-.5.5v1h3.5v1.5H11.5v1h2v1.5z"/>
+            </svg>
+          </div>
+          <div class="feature-text-wrap">
+            <h3 class="feature-title">Affordable Prices</h3>
+            <p class="feature-desc">Great taste at reasonable prices.</p>
+          </div>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="feature-item">
+          <div class="feature-icon-wrap">
+            <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <!-- Clock / Fast Service Icon -->
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div class="feature-text-wrap">
+            <h3 class="feature-title">Fast Service</h3>
+            <p class="feature-desc">Quick service so you can enjoy more.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Popular Dishes & About Us Split Section -->
+    <section class="dishes-about-section" id="about" aria-label="Popular Dishes and About Attil">
+      <div class="dishes-about-grid">
+        
+        <!-- Left Column: Popular Dishes -->
+        <div class="popular-dishes-block">
+          <div class="section-header-row">
+            <div class="section-title-wrap">
+              <span class="section-accent-line"></span>
+              <h2 class="section-title">Our Popular Dishes</h2>
+            </div>
+            <button class="btn-link-action" onclick="openMenuModal(event)" aria-label="View all menu items">
+              <span>View All Menu</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+
+          <!-- 5 Food Cards: Popular Dishes (Marquee Moving Right to Left - 4 Seamless Sets) -->
+          <div class="cards-marquee-container marquee-left" aria-label="Popular Dishes Scrolling Row">
+            <div class="cards-marquee-track scroll-rtl">
+              
+              <!-- Set 1 -->
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_biryani.png" alt="Chicken Biryani" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Chicken Biryani</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_chickencurry.png" alt="Chicken Curry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Chicken Curry</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_muttoncurry.png" alt="Mutton Curry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Mutton Curry</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_chickenkabab.png" alt="Chicken Kabab" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Chicken Kabab</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Fish Fry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Fish Fry</span></div>
+              </div>
+
+              <!-- Set 2 -->
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_biryani.png" alt="Chicken Biryani" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Chicken Biryani</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_chickencurry.png" alt="Chicken Curry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Chicken Curry</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_muttoncurry.png" alt="Mutton Curry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Mutton Curry</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_chickenkabab.png" alt="Chicken Kabab" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Chicken Kabab</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Fish Fry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Fish Fry</span></div>
+              </div>
+
+              <!-- Set 3 -->
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_biryani.png" alt="Chicken Biryani" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Chicken Biryani</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_chickencurry.png" alt="Chicken Curry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Chicken Curry</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_muttoncurry.png" alt="Mutton Curry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Mutton Curry</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_chickenkabab.png" alt="Chicken Kabab" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Chicken Kabab</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Fish Fry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Fish Fry</span></div>
+              </div>
+
+              <!-- Set 4 -->
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_biryani.png" alt="Chicken Biryani" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Chicken Biryani</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_chickencurry.png" alt="Chicken Curry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Chicken Curry</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_muttoncurry.png" alt="Mutton Curry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Mutton Curry</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_chickenkabab.png" alt="Chicken Kabab" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Chicken Kabab</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Fish Fry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Fish Fry</span></div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Sea Food Row Header -->
+          <div class="section-header-row seafood-header-row">
+            <div class="section-title-wrap">
+              <span class="section-accent-line"></span>
+              <h2 class="section-title">Coastal Sea Food Specialties</h2>
+            </div>
+            <span class="seafood-badge">Fresh Daily Catch 🐟</span>
+          </div>
+
+          <!-- 5 Sea Food Cards (Marquee Moving Left to Right - 4 Seamless Sets) -->
+          <div class="cards-marquee-container marquee-right" aria-label="Sea Food Specialties Scrolling Row">
+            <div class="cards-marquee-track scroll-ltr">
+              
+              <!-- Set 1 -->
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Anjal Masala Fry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Anjal Tawa Fry</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_prawns_gheeroast.png" alt="Prawns Ghee Roast" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Prawns Ghee Roast</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_pomfret_fry.png" alt="Pomfret Rava Fry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Pomfret Rava Fry</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_crab_sukka.png" alt="Crab Sukka" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Crab Sukka</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_squid_fry.png" alt="Squid Pepper Fry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Squid Pepper Fry</span></div>
+              </div>
+
+              <!-- Set 2 -->
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Anjal Masala Fry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Anjal Tawa Fry</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_prawns_gheeroast.png" alt="Prawns Ghee Roast" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Prawns Ghee Roast</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_pomfret_fry.png" alt="Pomfret Rava Fry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Pomfret Rava Fry</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_crab_sukka.png" alt="Crab Sukka" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Crab Sukka</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_squid_fry.png" alt="Squid Pepper Fry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Squid Pepper Fry</span></div>
+              </div>
+
+              <!-- Set 3 -->
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Anjal Masala Fry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Anjal Tawa Fry</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_prawns_gheeroast.png" alt="Prawns Ghee Roast" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Prawns Ghee Roast</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_pomfret_fry.png" alt="Pomfret Rava Fry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Pomfret Rava Fry</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_crab_sukka.png" alt="Crab Sukka" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Crab Sukka</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_squid_fry.png" alt="Squid Pepper Fry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Squid Pepper Fry</span></div>
+              </div>
+
+              <!-- Set 4 -->
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_fishfry.png" alt="Anjal Masala Fry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Anjal Tawa Fry</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_prawns_gheeroast.png" alt="Prawns Ghee Roast" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Prawns Ghee Roast</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_pomfret_fry.png" alt="Pomfret Rava Fry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Pomfret Rava Fry</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_crab_sukka.png" alt="Crab Sukka" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Crab Sukka</span></div>
+              </div>
+              <div class="dish-card">
+                <div class="dish-img-wrapper"><img src="images/dish_squid_fry.png" alt="Squid Pepper Fry" class="dish-img" loading="lazy"></div>
+                <div class="dish-title-pill"><span class="dish-name">Squid Pepper Fry</span></div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: About Attil & Chef Visual Card -->
+        <div class="about-block">
+          <div class="about-content-wrap">
+            <h2 class="about-heading">About Attil Non Veg Hotel</h2>
+            <p class="about-desc">
+              At Attil, we serve a wide variety of delicious non veg dishes made with the freshest ingredients and authentic spices. Our goal is to provide every customer with a memorable dining experience.
+            </p>
+            <button class="btn-know-more" onclick="openAboutModal()" aria-label="Know more about Attil">
+              <span>Know More About Us</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Chef Illustration Graphic Card -->
+          <div class="chef-quote-card">
+            <div class="chef-illustration-box">
+              <img src="images/chef_illustration.png" alt="Attil Master Chef" class="chef-art-img" loading="lazy">
+            </div>
+            <div class="chef-quote-text">
+              <span class="sparkle-icon">✦</span>
+              <h3 class="quote-title">Good Food</h3>
+              <h3 class="quote-title">Good Mood</h3>
+              <span class="quote-script">Always!</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Bottom Information Bar Section -->
+    <section class="bottom-info-section" aria-label="Restaurant Contact and Hours Information">
+      <div class="bottom-info-card">
+        
+        <!-- Info 1: Our Location -->
+        <div class="info-column info-location-col">
+          <div class="info-icon-box">
+            <svg class="info-icon location-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+          </div>
+          <div class="info-text-box">
+            <h4 class="info-label">Our Location</h4>
+            <p class="info-detail">Attil Bendoorwell Main Rd,</p>
+            <p class="info-detail">below radha medical, Bendoorwell,</p>
+            <p class="info-detail">Kankanady, Mangaluru,</p>
+            <p class="info-detail">Karnataka 575002, India</p>
+          </div>
+        </div>
+
+        <!-- Info 2: Call Us -->
+        <div class="info-column info-call-col">
+          <div class="info-icon-box">
+            <svg class="info-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/>
+            </svg>
+          </div>
+          <div class="info-text-box">
+            <h4 class="info-label">Call Us</h4>
+            <a href="tel:+919845123456" class="info-phone-link">+91 XXXXXXXXXX</a>
+            <span class="info-sub">Tap to call for takeaways &amp; inquiries</span>
+          </div>
+        </div>
+
+        <!-- Info 3: Opening Hours -->
+        <div class="info-column info-hours-col">
+          <div class="info-icon-box">
+            <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </div>
+          <div class="info-text-box">
+            <h4 class="info-label">Opening Hours</h4>
+            <p class="info-time">10:30 AM - 11:00 PM</p>
+            <p class="info-days">(Everyday)</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer Simple Copyright Bar -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <p>© 2026 Attil Non Veg Hotel Mangalore. All Rights Reserved. Pure &amp; Authentic Coastal Non-Veg Delights.</p>
+    </div>
+  </footer>
+
+  <!-- ==================== INTERACTIVE MODALS ==================== -->
+
+  <!-- Full Menu Modal -->
+  <div class="modal-overlay" id="menuModal" onclick="closeModalOnOutsideClick(event, 'menuModal')">
+    <div class="modal-card modal-lg">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-subtitle">Attil Non Veg Hotel</span>
+          <h2 class="modal-title">Our Complete Authentic Menu</h2>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal('menuModal')" aria-label="Close menu modal">&times;</button>
+      </div>
+
+      <!-- Menu Category Tabs -->
+      <div class="menu-tabs-bar">
+        <button class="menu-tab-btn active" onclick="filterMenuCategory('all', this)">All Items</button>
+        <button class="menu-tab-btn" onclick="filterMenuCategory('biryani', this)">Biryanis</button>
+        <button class="menu-tab-btn" onclick="filterMenuCategory('chicken', this)">Chicken Specials</button>
+        <button class="menu-tab-btn" onclick="filterMenuCategory('mutton', this)">Mutton Specials</button>
+        <button class="menu-tab-btn" onclick="filterMenuCategory('seafood', this)">Coastal Fish Fry</button>
+        <button class="menu-tab-btn" onclick="filterMenuCategory('starters', this)">Starters &amp; Kababs</button>
+        <button class="menu-tab-btn" onclick="filterMenuCategory('breads', this)">Breads &amp; Rotti</button>
+      </div>
+
+      <!-- Menu Items Grid -->
+      <div class="modal-body modal-scrollable">
+        <div class="menu-items-grid" id="menuGridContainer">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <div class="modal-footer-left">
+          <span class="menu-footer-note">Serving fresh, authentic recipes everyday</span>
+        </div>
+        <div class="modal-footer-right">
+          <button class="btn btn-secondary" onclick="closeModal('menuModal')">Close</button>
+          <a href="tel:+919845123456" class="btn btn-primary">Call to Order: +91 98451 23456</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Specialties Modal -->
+  <div class="modal-overlay" id="specialtiesModal" onclick="closeModalOnOutsideClick(event, 'specialtiesModal')">
+    <div class="modal-card modal-md">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-subtitle">Coastal Mangalorean Heritage</span>
+          <h2 class="modal-title">Attil House Specialties</h2>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal('specialtiesModal')">&times;</button>
+      </div>
+      <div class="modal-body modal-scrollable">
+        <div class="specialties-list">
+          <div class="specialty-card">
+            <div class="specialty-icon-box">🍗</div>
+            <div class="specialty-details">
+              <h4>Kundapura Chicken Ghee Roast</h4>
+              <p>Succulent chicken pieces tossed in stone-ground Byadgi chili paste, aromatic coastal spices, and pure cow ghee. A signature Mangalore delicacy!</p>
+            </div>
+          </div>
+          <div class="specialty-card">
+            <div class="specialty-icon-box">🐟</div>
+            <div class="specialty-details">
+              <h4>Mangalore Anjal (Kingfish) Tawa Fry</h4>
+              <p>Fresh coastal Kingfish steak marinated with traditional masala paste and pan-seared to crispy spicy perfection.</p>
+            </div>
+          </div>
+          <div class="specialty-card">
+            <div class="specialty-icon-box">🍲</div>
+            <div class="specialty-details">
+              <h4>Attil Special Kori Rotti &amp; Curry</h4>
+              <p>Crispy sun-dried rice wafers drenched in piping hot, rich coconut chicken gravy. The ultimate Bunt culinary pride.</p>
+            </div>
+          </div>
+          <div class="specialty-card">
+            <div class="specialty-icon-box">🥘</div>
+            <div class="specialty-details">
+              <h4>Slow-Cooked Mutton Sukka</h4>
+              <p>Tender mutton chunks slow-roasted with roasted grated coconut, fennel, curry leaves, and traditional pepper blend.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary btn-block" onclick="closeModal('specialtiesModal'); openMenuModal(event);">Explore Full Menu</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Gallery Lightbox Modal -->
+  <div class="modal-overlay" id="galleryModal" onclick="closeModalOnOutsideClick(event, 'galleryModal')">
+    <div class="modal-card modal-lg">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-subtitle">Visual Experience</span>
+          <h2 class="modal-title">Attil Food &amp; Ambience Gallery</h2>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal('galleryModal')">&times;</button>
+      </div>
+      <div class="modal-body modal-scrollable">
+        <div class="gallery-grid">
+          <div class="gallery-thumb"><img src="images/hero_biryani.png" alt="Attil Biryani"><span class="gallery-caption">Chicken Dum Biryani</span></div>
+          <div class="gallery-thumb"><img src="images/hero_gheeroast.png" alt="Chicken Ghee Roast"><span class="gallery-caption">Chicken Ghee Roast</span></div>
+          <div class="gallery-thumb"><img src="images/dish_chickencurry.png" alt="Chicken Curry"><span class="gallery-caption">Traditional Chicken Curry</span></div>
+          <div class="gallery-thumb"><img src="images/dish_muttoncurry.png" alt="Mutton Curry"><span class="gallery-caption">Rich Mutton Curry</span></div>
+          <div class="gallery-thumb"><img src="images/dish_chickenkabab.png" alt="Crispy Kabab"><span class="gallery-caption">Crispy Chicken Kabab</span></div>
+          <div class="gallery-thumb"><img src="images/dish_fishfry.png" alt="Anjal Fish Fry"><span class="gallery-caption">Mangalore Tava Fish Fry</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Us Modal -->
+  <div class="modal-overlay" id="aboutModal" onclick="closeModalOnOutsideClick(event, 'aboutModal')">
+    <div class="modal-card modal-md">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-subtitle">Our Heritage &amp; Quality</span>
+          <h2 class="modal-title">About Attil Non Veg Hotel</h2>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal('aboutModal')">&times;</button>
+      </div>
+      <div class="modal-body modal-scrollable">
+        <div class="about-modal-text">
+          <p>Welcome to <strong>Attil Non Veg Hotel</strong>, located at Bendoorwell Main Road, Kankanady, Mangaluru.</p>
+          <p>Founded with a passion for authentic coastal Karnataka non-vegetarian traditions, Attil brings together time-tested family recipes, fresh daily-sourced meats, and rich coastal spice blends.</p>
+          <div class="about-highlights-list">
+            <div class="about-hl-item">✓ 100% Halal and fresh meat sourced every morning.</div>
+            <div class="about-hl-item">✓ Fresh coastal fish directly from Mangalore harbour.</div>
+            <div class="about-hl-item">✓ Zero artificial food coloring or preservatives.</div>
+            <div class="about-hl-item">✓ Highest hygiene standards in preparation and dining.</div>
+          </div>
+          <p class="about-closing">Whether you are dining in with family or taking home your favorite biryani and curries, we promise food that delights your soul every single time!</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="tel:+919845123456" class="btn btn-primary btn-block">Call Us: +91 98451 23456</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Us Modal -->
+  <div class="modal-overlay" id="contactModal" onclick="closeModalOnOutsideClick(event, 'contactModal')">
+    <div class="modal-card modal-md">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <span class="modal-subtitle">Reach Out to Us</span>
+          <h2 class="modal-title">Contact &amp; Location</h2>
+        </div>
+        <button class="modal-close-btn" onclick="closeModal('contactModal')">&times;</button>
+      </div>
+      <div class="modal-body modal-scrollable">
+        <div class="contact-info-list">
+          <div class="contact-card-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Restaurant Address</h4>
+              <p>Attil Bendoorwell Main Rd, Below Radha Medical, Bendoorwell, Kankanady, Mangaluru, Karnataka 575002, India</p>
+            </div>
+          </div>
+          <div class="contact-card-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h4>Phone &amp; Orders</h4>
+              <p><a href="tel:+919845123456" class="contact-link">+91 98451 23456</a></p>
+            </div>
+          </div>
+          <div class="contact-card-item">
+            <div class="contact-icon">⏰</div>
+            <div>
+              <h4>Operating Hours</h4>
+              <p>Monday - Sunday: 10:30 AM to 11:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <a href="https://maps.google.com/?q=Attil+Bendoorwell+Main+Rd+Mangaluru" target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-block mt-3">
+          Open in Google Maps &rarr;
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toastNotification">
+    <span id="toastMessage">Item added!</span>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
